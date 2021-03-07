@@ -1,12 +1,33 @@
-
 exports.min = function min (array) {
-  return arguments.length && array.length ? array.sort((a, b) => a - b)[0] : 0;
+  try{  let count=0;
+for(let i=0;i<array.length;i++){
+if(array[i]<count){count=array[i];}
+}
+return count;}
+catch{return 0;}
 }
 
+
 exports.max = function max (array) {
-    return arguments.length && array.length ? array.sort((a, b) => b - a)[0] : 0;
+try{
+ let count=0;
+for(let i=0;i<array.length;i++){
+if(array[i]>count){count=array[i];}
+}
+return count;}
+  catch{return 0;}
 }
 
 exports.avg = function avg (array) {
-  return arguments.length && array.length ? array.reduce((p, c) => p + c)/array.length : 0;
+try{
+  let count=0;
+for(let i=0;i<array.length;i++){
+count+=array[i];
+p=count/array.length;
 }
+
+  return p;}
+ 
+
+   catch{return 0;}
+ }
